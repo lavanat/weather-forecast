@@ -1,5 +1,5 @@
 var searchBtn = document.getElementById('search-button');
-
+var resultsContainer = document.getElementById('right-container');
 var todayEl = document.getElementById('today');
 var day1El = document.getElementById('t-1');
 var day2El = document.getElementById('t-2');
@@ -22,6 +22,7 @@ const getLatLon = (city) => {
             lon = data[0].lon;
             gettodayWeather(lat, lon);
             getWeather(lat, lon);
+            resultsContainer.style.display = "";
         });
 };
 
@@ -44,7 +45,7 @@ function loadSearchButtons() {
     document.getElementById("search-history").innerHTML = ""
     if (localStorage.getItem("cities") !== null) {
         var searchHistory = document.getElementById("search-history");
-        var titleEl = document.createElement("h4");
+        var titleEl = document.createElement("h3");
         titleEl.textContent = "Previous Searches:";
         titleEl.classList.add("col-lg-12");
         searchHistory.append(titleEl);
@@ -73,7 +74,7 @@ const gettodayWeather = (lat, lon) => {
             return response.json();
         })
         .then(function (data) {
-            var cityEl = document.createElement('h3');
+            var cityEl = document.createElement('h2');
             cityEl.innerHTML = data.name;
             days[0].replaceChildren()
             days[0].appendChild(cityEl);
@@ -278,6 +279,7 @@ searchContainer.on("click", ".savedButtons", function (event) {
 
 const init = () => {
     loadSearchButtons();
+    resultsContainer.style.display = "none"
 };
 
 init ();
