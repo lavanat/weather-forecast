@@ -11,11 +11,7 @@ You can use this page to get the weather for your city.
 
 ## Link to Deployed Application
 
-https://lavanat.github.io/password-generator/
+https://lavanat.github.io/weather-forecast/
 
 ## Screenshot of Deployed Application
-![Password Generator Screenshot](./Password-Generator-Screenshot.png)
-
-## License
-
-Refer to the License file in the repo.
+![Weather Forecast Application Screenshot](./assets/images/weather-forecast-screenshot.png)
