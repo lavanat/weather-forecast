@@ -74,7 +74,7 @@ const gettodayWeather = (lat, lon) => {
             return response.json();
         })
         .then(function (data) {
-            var cityEl = document.createElement('h2');
+            var cityEl = document.createElement('h4');
             cityEl.innerHTML = data.name;
             days[0].replaceChildren()
             days[0].appendChild(cityEl);

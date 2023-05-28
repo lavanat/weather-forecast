@@ -11,7 +11,7 @@
     border: 0px;
 }
 .savedButtons {
-    font-size: 22px;
+    font-size: 20px;
 }
 h1 {
     background-color: rgb(176, 241, 241);
@@ -19,6 +19,10 @@ h1 {
 
 h3 {
     margin-top: 10px;
+}
+
+h4 {
+    font-size: 20px;
 }
 
 #search-history {
@@ -30,7 +34,7 @@ h3 {
 }
 
 form {
-    font-size: 30px;
+    font-size: 20px;
     text-align: left;
     padding: 10px;
 }
