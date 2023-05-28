@@ -45,7 +45,8 @@ function loadSearchButtons() {
     if (localStorage.getItem("cities") !== null) {
         var searchHistory = document.getElementById("search-history");
         var titleEl = document.createElement("h4");
-        titleEl.textContent = "Previous Searches";
+        titleEl.textContent = "Previous Searches:";
+        titleEl.classList.add("col-lg-12");
         searchHistory.append(titleEl);
         var pastSavedSearches = JSON.parse(localStorage.getItem("cities"));
         for (i = 0; i < pastSavedSearches.length; i++) {
@@ -274,3 +275,9 @@ searchContainer.on("click", ".savedButtons", function (event) {
     var buttonValue = $(this).attr("value");
     getLatLon(buttonValue);
 });
+
+const init = () => {
+    loadSearchButtons();
+};
+
+init ();
